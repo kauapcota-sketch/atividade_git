@@ -11,10 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-     
-        colorScheme: .fromSeed(seedColor: Colors.deepPurple),
-      ),
+      theme: ThemeData(colorScheme: .fromSeed(seedColor: Colors.deepPurple)),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
@@ -23,9 +20,7 @@ class MyApp extends StatelessWidget {
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
 
-
-
-  final String title; 
+  final String title;
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
@@ -36,7 +31,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void _incrementCounter() {
     setState(() {
-  
       _counter++;
     });
   }
@@ -44,46 +38,39 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-       backgroundColor: const Color(0xFF1F2A44),
+      backgroundColor: const Color(0xFF1F2A44),
       body: SingleChildScrollView(
         padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 80.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-
-
-           Align(
+            Align(
               alignment: Alignment.topLeft,
-               child: Text(
-                'Gestão estoque',
+              child: Text(
+                'Gerenciamento de computadores',
                 style: TextStyle(
                   fontSize: 40,
-                   color: Colors.white,
-                    fontFamily: "arial"),
-               ),
-           ),
+                  color: Colors.white,
+                  fontFamily: "arial",
+                ),
+              ),
+            ),
 
-          ElevatedButton(
-              onPressed: () {
-
-                
-              },
+            ElevatedButton(
+              onPressed: () {},
               style: ElevatedButton.styleFrom(
                 padding: const EdgeInsets.all(16),
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12),
+                ),
                 backgroundColor: Colors.blue,
-            
-                
               ),
-              child: const Text("Entrar", style: TextStyle(fontSize: 18)),
+              child: const Text("Clique", style: TextStyle(fontSize: 18)),
             ),
-          ]
+          ],
         ),
       ),
     );
-    
   }
 }
-
-
